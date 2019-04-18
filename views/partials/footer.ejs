@@ -1,0 +1,66 @@
+<% if (page != "contact") { %>
+<% if (page != "why") { %>
+<div class="container">
+    <hr>
+</div>
+<% } %>
+<section class="container py-24 md:py-40">
+    <div class="text-center">
+        <h4 class="heading-quaternary">Our partners</h4>
+        <h2 class="heading-secondary pb-8">A special thanks to the following.</h2>
+        <p class="pb-16">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Suscipit deleniti eos nihil eum, rem ex! Hic reprehenderit
+            consequatur eum eaque natus totam ut quas soluta id?
+            Pariatur recusandae autem quis.
+        </p>
+        <div class="w-full flex flex-wrap justify-between">
+            <div class="w-1/3 md:pt-16 md:w-1/5">
+                <img class="logo" src="img/sap-logo.png" alt="SAP Logo">
+            </div>
+            <div class="w-1/3 md:w-1/5">
+                <img class="logo" src="img/bcit-logo.png" alt="BCIT Logo">
+            </div>
+            <div class="w-1/3 md:pt-16 md:w-1/5">
+                <img class="logo" src="img/vsb-logo.png" alt="VSB Logo">
+            </div>
+            <div class="w-1/2 pt-16 pl-24 md:pl-0 md:pt-0 md:w-1/5">
+                <img class="logo" src="img/bc-logo.png" alt="BC Logo">
+            </div>
+            <div class="w-1/2 pt-16 pr-24 md:pr-0 md:pt-16 md:w-1/5">
+                <img class="logo" src="img/k12-logo.png" alt="K-12 Logo">
+            </div>
+            <!-- 
+            <img class="logo logo-1" src="img/sap-logo.png" alt="SAP logo">
+            <img class="logo logo-2" src="img/bcit-logo.png" alt="BCIT logo">
+            <img class="logo logo-3" src="img/vsb-logo.png" alt="VSB logo">
+            <img class="logo logo-4" src="img/bc-logo.png" alt="BC logo">
+            <img class="logo logo-5" src="img/k12-logo.png" alt="K-12 logo">-->
+        </div>
+    </div>
+</section>
+<% } %>
+
+<% if (page == "index") { %>
+<script>
+    particlesJS.load('particles-js', 'libs/particles-white.json', function () {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+<% } else { %>
+<script>
+    particlesJS.load('particles-js', 'libs/particles-black.json', function () {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+<% } %>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="libs/script.js"></script>
+</body>
+
+</html>

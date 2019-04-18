@@ -1,0 +1,103 @@
+<% include partials/header %>
+
+<% include partials/navbar %>
+
+<main style="background-image: url(../img/bg-pattern.png)">
+    <section class="container mx-auto flex flex-wrap pt-80">
+        <h1 class="heading-primary pb-24 md:pb-40" style="color: black">
+            Any questions? <br>
+            Feel free to contact us!
+        </h1>
+        <div class="w-full md:w-1/2">
+            <form method="POST" action="/send/contact">
+                <h3 class="heading-tertiary pb-4">
+                    Send us a message!
+                </h3>
+                <div class="form__group">
+                    <input name="name" type="text" class="form__input" placeholder="Full name" id="name" required>
+                    <label for="name" class="form__label">Full name</label>
+                </div>
+                <div class="form__group">
+                    <input name="email" type="email" class="form__input" placeholder="Email address" id="email"
+                        required>
+                    <label for="email" class="form__label">Email address</label>
+                </div>
+
+                <div class="form__group">
+                    <textarea name="message" id="message" rows="3" class="form__input" placeholder="Your message"
+                        required></textarea>
+                    <label for="message" class="form__label">Your message</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary u-margin-top-small">Send message</button>
+            </form>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-wrap pt-16 md:pt-0">
+            <div class="w-full sm:w-1/2 pb-8">
+                <h3 class="heading-tertiary">
+                    Say hello!
+                </h3>
+                hello@templetonstem.org <br>
+                mhengeveld@vsb.bc.ca <br>
+                cjanze@vsb.bc.ca
+            </div>
+            <div class="w-full sm:w-1/2 pb-8 sm:pb-0">
+                <h3 class="heading-tertiary">
+                    Prefer to talk over the phone?
+                </h3>
+                604 713 8984
+            </div>
+            <div class="w-full pt-8 sm:pt-0">
+                <h3 class="heading-tertiary">
+                    Follow us!
+                </h3>
+                <a href="" class="social-media">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="social-media">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="social-media">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto flex flex-wrap py-24 md:py-40">
+        <div class="w-full md:w-1/2">
+            <h4 class="heading-quaternary">
+                Visit us on information night
+            </h4>
+            <h2 class="heading-secondary pb-8">
+                NOVEMBER 15 2019, <br>
+                THURSDAY 7:00 PM
+            </h2>
+            <p>
+                The STEM Program at Templeton combines science, technology, engineering, and mathematics into a
+                multi-course cohort that
+                engages students in project based learning. Students
+                work in
+                collaborative teams to activate core competencies through authentic, multi-week design
+                challenges based
+                in real-world problems. Students have full access to facilities, elective courses, clubs and teams at
+                Templeton
+                Secondary School.
+                <br><br>
+                Note: This is not a District Program.
+            </p>
+        </div>
+        <div class="w-full md:w-1/2 px-16 py-16 md:py-0">
+            <div class="relative w-full" style="padding-top: 100%">
+                <div class="absolute rounded-full overflow-hidden" style="top: 0; bottom: 0; right: 0; left: 0;">
+                    <iframe class="w-full h-full"
+                        src="https://maps.google.com/maps?q=727%20Templeton%20Drive%20Vancouver%2C%20BC%2C%20V5L%204N8%2C%20Canada&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                        scrolling="no" frameborder="0" style="border: 0px;" allowfullscreen>#document</iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<% include partials/footer %>

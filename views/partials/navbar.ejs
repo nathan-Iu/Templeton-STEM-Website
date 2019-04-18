@@ -1,0 +1,85 @@
+<div class="container relative">
+    <nav class="container pt-5 navbar navbar-expand-md" style="left: 0">
+        <a href="/" class="navbar-brand">
+            <img src="" id="stem-logo" alt="Templeton STEM">
+        </a>
+
+        
+        <div class="hamburger-menu block md:hidden">
+            
+            <div class="bar <% if (page == 'index') { %> bar-white <% } else { %> bar-black <% } %>"></div>
+            
+        </div>
+        
+        <div class="mobile-nav hide">
+            <ul>
+                <li class="nav-item">
+                    <a href="/projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/success" class="nav-link">Success Stories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/why" class="nav-link">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav align-items-center ml-auto">
+                <li class="nav-item">
+                    <a href="/projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/success" class="nav-link">Success Stories</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="dropbtn nav-link">More
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <ul class="dropdown-content">
+                        <a href="/why" class="nav-link">About us</a>
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <!-- <button class="modalBtn btn btn-primary">Apply now</button> -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Apply now
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<% if (page == "index") { %>
+<script>
+    document.querySelectorAll(".nav-link").forEach(function (link) { link.style.color = "white"; });
+</script>
+<% } %>
