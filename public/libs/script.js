@@ -7,4 +7,8 @@
 })();
 
 
+function blink() {
+    document.querySelector('.underscore').classList.toggle('blink');
+};
 
+window.setInterval(blink, 600);

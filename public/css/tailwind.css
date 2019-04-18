@@ -49,7 +49,6 @@ body {
     font-size: 5rem;
     font-weight: 700;
     line-height: 1.3;
-    color: white;
     text-transform: uppercase;
 }
 
@@ -553,7 +552,21 @@ body {
     text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-/* Composition photo */
+.navbar .fa-facebook-f {
+    padding-left: 1.5rem;
+}
+
+.navbar .fab {
+    font-size: 2rem;
+    padding-right: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .social-media-wrapper {
+        top: 7rem;
+        right: .5rem;
+    }
+}
 
 .composition {
     display: grid;
@@ -569,7 +582,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
     .composition {
         grid-template-rows: repeat(9, 3.5rem);
     }
@@ -733,4 +746,114 @@ body {
 
 .mobile-nav a:hover {
     color: #2980b9;
+}
+
+/* Products page */
+
+.project {
+    width: 35rem;
+    height: 25rem;
+    background-color: #fff;
+    background: linear-gradient(#f8f8f8, #fff);
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project h1 {
+    text-align: center;
+}
+
+.project .additional {
+    position: absolute;
+    width: 15rem;
+    height: 100%;
+    background: linear-gradient(#dE685E, #EE786E);
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.project:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.project .additional .user-project {
+    width: 15rem;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.project .additional .user-project::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: -2px;
+    height: 80%;
+    border-left: 2px solid rgba(0, 0, 0, 0.025);
+}
+
+.project .additional .more-info {
+    width: 20rem;
+    float: left;
+    position: absolute;
+    left: 15rem;
+    height: 100%;
+}
+
+.project .additional .more-info h1 {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .project .additional, .project .additional .user-project {
+        width: 5rem;
+    }
+    .project .additional .more-info {
+        left: 5rem;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+    .project .additional, .project .additional .user-project {
+        width: 12rem;
+    }
+    .project .additional .more-info {
+        left: 12rem;
+    }
+}
+
+.project .general {
+    width: 20rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.project .general .more {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.9em;
+}
+
+.abs-center {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blink {
+    visibility: hidden;
 }

@@ -3,6 +3,9 @@
 <header style="background-image: url(../img/bg-pattern.png); height: 50vh">
     <div id="particles-js" style="height: 50vh"></div>
     <% include partials/navbar %>
+    <h1 class="heading-primary abs-center">
+        Projects<span class="underscore">_</span>
+    </h1>
 </header>
 
 <section class="container mx-auto py-24 md:py-40">
@@ -141,87 +144,5 @@
     </div>
 
 </section>
-
-<style>
-    .project {
-        width: 35rem;
-        height: 25rem;
-        background-color: #fff;
-        background: linear-gradient(#f8f8f8, #fff);
-        box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
-        border-radius: 6px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .project h1 {
-        text-align: center;
-    }
-
-    .project .additional {
-        position: absolute;
-        width: 15rem;
-        height: 100%;
-        background: linear-gradient(#dE685E, #EE786E);
-        transition: width 0.4s;
-        overflow: hidden;
-        z-index: 2;
-    }
-
-    .project:hover .additional {
-        width: 100%;
-        border-radius: 0 5px 5px 0;
-    }
-
-    .project .additional .user-project {
-        width: 15rem;
-        height: 100%;
-        position: relative;
-        float: left;
-    }
-
-    .project .additional .user-project::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 10%;
-        right: -2px;
-        height: 80%;
-        border-left: 2px solid rgba(0, 0, 0, 0.025);
-        */
-    }
-
-    .project .additional .more-info {
-        width: 20rem;
-        float: left;
-        position: absolute;
-        left: 15rem;
-        height: 100%;
-    }
-
-    .project .additional .more-info h1 {
-        color: #fff;
-        margin-bottom: 0;
-    }
-
-    .project .general {
-        width: 20rem;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        box-sizing: border-box;
-        padding: 1rem;
-        padding-top: 0;
-    }
-
-    .project .general .more {
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        font-size: 0.9em;
-    }
-</style>
 
 <% include partials/footer %>

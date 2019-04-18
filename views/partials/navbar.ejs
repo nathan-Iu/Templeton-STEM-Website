@@ -4,13 +4,26 @@
             <img src="" id="stem-logo" alt="Templeton STEM">
         </a>
 
-        
-        <div class="hamburger-menu block md:hidden">
-            
-            <div class="bar <% if (page == 'index') { %> bar-white <% } else { %> bar-black <% } %>"></div>
-            
+        <div class="social-media-wrapper hidden md:inline-block md:absolute lg:relative">
+            <a href="" class="social-media">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="social-media">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="social-media">
+                <i class="fab fa-instagram"></i>
+            </a>            
         </div>
-        
+
+
+
+        <div class="hamburger-menu block md:hidden">
+
+            <div class="bar <% if (page == 'index') { %> bar-white <% } else { %> bar-black <% } %>"></div>
+
+        </div>
+
         <div class="mobile-nav hide">
             <ul>
                 <li class="nav-item">
@@ -48,13 +61,13 @@
                 <li class="nav-item">
                     <!-- <button class="modalBtn btn btn-primary">Apply now</button> -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                            Apply now
+                        Apply now
                     </button>
                 </li>
             </ul>
         </div>
     </nav>
-    
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -76,10 +89,11 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
 
 <% if (page == "index") { %>
 <script>
     document.querySelectorAll(".nav-link").forEach(function (link) { link.style.color = "white"; });
+    // document.querySelectorAll(".fab").forEach(function (icon) { icon.style.color = "white"; });
 </script>
 <% } %>
