@@ -1,3 +1,5 @@
+const num = document.querySelectorAll('.num');
+
 (function () {
     $('.hamburger-menu').on('click', function () {
         $('.bar').toggleClass('animate');
@@ -7,8 +9,10 @@
 })();
 
 
-function blink() {
-    document.querySelector('.underscore').classList.toggle('blink');
-};
+if (document.body.contains(document.querySelector('.underscore'))) {
+    function blink() {
+        document.querySelector('.underscore').classList.toggle('blink');
+    };
 
-window.setInterval(blink, 600);
+    window.setInterval(blink, 600);    
+}

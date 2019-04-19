@@ -33,17 +33,37 @@ app.get("/contact", function (req, res) {
 
 app.post("/send/:id", function (req, res) {
     if (req.params.id == "contact") {
-        var output =
-            `
+        var output = `
             From: ${req.body.name} - ${req.body.email}
             <br>
             <h4>Message:</h4>
             ${req.body.message}
             `;
         var subjectLine = "<Inquiry from STEM website>";
-    } else if (req.params.id == "nav") {
-        var output = "";
-        var subjectLine = "";
+    } if (req.params.id == "modal") {
+        let crossBoundary;
+        req.body.crossBoundaryYes == "on" ? crossBoundary = "yes" : crossBoundary = "no";
+        
+        var output = `
+            Applicant name: ${req.body.name}
+            <br>
+            Cross Boundary: ${crossBoundary}
+            <br>
+            PEN: ${req.body.PEN}
+            <br>
+            Birthdate: { MM: ${req.body.mm} DD: ${req.body.dd} YYYY: ${req.body.yyyy} }
+            <br>
+            Home Address: ${req.body.address}
+            <br>
+            Parent/Guardian: ${req.body.guardian}
+            <br>
+            Phone: ${req.body.num1} - ${req.body.num2} - ${req.body.num3}
+            <br>
+            Parent Email: ${req.body.parentEmail}
+            <br>
+            Student Email: ${req.body.studentEmail}
+        `;
+        var subjectLine = "<Application from STEM website>";
     }
 
     let transporter = nodemailer.createTransport({
@@ -67,11 +87,6 @@ app.post("/send/:id", function (req, res) {
             return console.log(error);
         }
         console.log("Message sent: %s", info.messageId);
-        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-        // Preview only available when sending through an Ethereal account
-        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
         res.redirect("back");
     })
 })

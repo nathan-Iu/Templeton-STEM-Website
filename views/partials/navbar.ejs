@@ -13,7 +13,7 @@
             </a>
             <a href="" class="social-media">
                 <i class="fab fa-instagram"></i>
-            </a>            
+            </a>
         </div>
 
 
@@ -25,37 +25,46 @@
         </div>
 
         <div class="mobile-nav hide">
-            <ul>
-                <li class="nav-item">
+            <ul class="container">
+                <li class="nav-item pt-24 pb-8">
                     <a href="/projects" class="nav-link">Projects</a>
                 </li>
-                <li class="nav-item">
+                <hr class="mx-auto">
+                <li class="nav-item py-8">
                     <a href="/success" class="nav-link">Success Stories</a>
                 </li>
-                <li class="nav-item">
+                <hr class="mx-auto">
+                <li class="nav-item py-8">
                     <a href="/why" class="nav-link">About us</a>
                 </li>
-                <li class="nav-item">
+                <hr class="mx-auto">
+                <li class="nav-item pt-8 pb-16">
                     <a href="/contact" class="nav-link">Contact</a>
                 </li>
+                <div class="pt-8">
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                        data-target="#exampleModal">
+                        Apply now
+                    </button>
+                </div>
             </ul>
         </div>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav align-items-center ml-auto">
                 <li class="nav-item">
-                    <a href="/projects" class="nav-link">Projects</a>
+                    <a href="/projects" class="nav-link nav-link-hover">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/success" class="nav-link">Success Stories</a>
+                    <a href="/success" class="nav-link nav-link-hover">Success Stories</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <button class="dropbtn nav-link">More
+                    <button class="dropbtn nav-link nav-link-hover">More
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <ul class="dropdown-content">
-                        <a href="/why" class="nav-link">About us</a>
-                        <a href="/contact" class="nav-link">Contact</a>
+                        <a href="/why" class="nav-link nav-link-hover">About us</a>
+                        <a href="/contact" class="nav-link nav-link-hover">Contact</a>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -73,18 +82,106 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <div class="modal-header py-8 px-8">
+                    <h2 class="heading-secondary">
+                        STEM Application
+                    </h2>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                <div class="modal-body pt-8 px-8">
+                    <form method="POST" action="/send/modal">
+                        <div class="form__group">
+                            <label class="pb-8 w-full">
+                                Are you apply Cross-Boundary? *
+                            </label>
+                            <div class="form__radio-group">
+                                <input type="radio" class="form__radio-input" id="yes" name="crossBoundaryYes">
+                                <label for="yes" class="form__radio-label">
+                                    <span class="form__radio-button"></span>
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form__radio-group">
+                                <input type="radio" class="form__radio-input" id="no" name="crossBoundaryNo">
+                                <label for="no" class="form__radio-label">
+                                    <span class="form__radio-button"></span>
+                                    No
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Full name -->
+                        <div class="form__group">
+                            <label for="name" class="">Name *</label>
+                            <input name="name" type="text" class="form__input" placeholder="Full name" id="name"
+                                required>
+                        </div>
+
+                        <!-- PEN -->
+                        <div class="form__group">
+                            <label for="PEN" class="">PEN *</label>
+                            <input name="PEN" type="text" class="form__input"
+                                placeholder="9 digit Ministry Personal Education Number" id="PEN" minlength="9"
+                                maxlength="9" required>
+                        </div>
+
+                        <!-- Birthdate -->
+                        <div class="form__group">
+                            <label for="bdate" class="">Birthdate *</label>
+                            <div class="flex flex-wrap" id="bdate">
+                                <input name="mm" type="text" class="form__input mr-4 form__input--small"
+                                    placeholder="MM" minlength="2" maxlength="2" required>
+                                <input name="dd" type="text" class="form__input mr-4 form__input--small"
+                                    placeholder="DD" minlength="2" maxlength="2" required>
+                                <input name="yyyy" type="text" class="form__input mr-4 form__input--small"
+                                    placeholder="YYYY" minlength="4" maxlength="4" required>
+                            </div>
+                        </div>
+
+                        <!-- Home Address -->
+                        <div class="form__group">
+                            <label for="address" class="">Home address</label>
+                            <input name="address" type="text" class="form__input" placeholder="Home address"
+                                id="address">
+                        </div>
+
+                        <!-- Parent/Guardian -->
+                        <div class="form__group">
+                            <label for="guardian" class="">Parent/Guardian</label>
+                            <input name="guardian" type="text" class="form__input" placeholder="Parent/Guardian"
+                                id="guardian">
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form__group">
+                            <label for="num" class="">Phone Number</label>
+                            <div class="flex flex-wrap" id="num">
+                                <input name="num1" type="tel" class="form__input mr-4 form__input--small"
+                                    placeholder="###" minlength="3" maxlength="3">
+                                <input name="num2" type="tel" class="form__input mr-4 form__input--small"
+                                    placeholder="###" minlength="3" maxlength="3">
+                                <input name="num3" type="tel" class="form__input mr-4 form__input--small"
+                                    placeholder="####" minlength="4" maxlength="4">
+                            </div>
+
+                        </div>
+                        <!-- Email Addresses -->
+                        <div class="form__group pb-16">
+                            <label for="email" class="">Email</label>
+                            <div id="email">
+                                <input name="parentEmail" type="email" class="form__input mb-8"
+                                    placeholder="Parent Email">
+                                <input name="studentEmail" type="email" class="form__input"
+                                    placeholder="Student Email">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer py-8 px-8">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -94,6 +191,5 @@
 <% if (page == "index") { %>
 <script>
     document.querySelectorAll(".nav-link").forEach(function (link) { link.style.color = "white"; });
-    // document.querySelectorAll(".fab").forEach(function (icon) { icon.style.color = "white"; });
 </script>
 <% } %>
