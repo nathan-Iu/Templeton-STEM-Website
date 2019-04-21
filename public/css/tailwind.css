@@ -62,6 +62,29 @@ html {
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .animated {
+        /*CSS transitions*/
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        /*CSS transforms*/
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+}
+
 body {
     box-sizing: border-box;
     padding-right: 0 !important;
@@ -966,7 +989,8 @@ h1 {
     font-size: 6rem;
     line-height: 7rem;
     position: relative;
-    animation: move 13.3s; /* 7 */
+    animation: move 13.3s;
+    /* 7 */
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-delay: 1s;

@@ -16,3 +16,4 @@ if (document.body.contains(document.querySelector('.underscore'))) {
 
     window.setInterval(blink, 600);    
 }
+
