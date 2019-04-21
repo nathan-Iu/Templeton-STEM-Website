@@ -5662,7 +5662,7 @@ h1 {
   font-size: 6rem;
   line-height: 7rem;
   position: relative;
-  animation: move 7s;
+  animation: move 13.3s; /* 7 */
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-delay: 1s;
