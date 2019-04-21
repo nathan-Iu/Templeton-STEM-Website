@@ -31,11 +31,11 @@
                 </li>
                 <hr class="mx-auto">
                 <li class="nav-item py-8">
-                    <a href="/success" class="nav-link">Success Stories</a>
+                    <a href="/success" class="nav-link">Success</a>
                 </li>
                 <hr class="mx-auto">
                 <li class="nav-item py-8">
-                    <a href="/why" class="nav-link">About us</a>
+                    <a href="/why" class="nav-link">About</a>
                 </li>
                 <hr class="mx-auto">
                 <li class="nav-item pt-8 pb-16">
@@ -44,7 +44,7 @@
                 <div class="pt-8">
                     <button type="button" class="btn btn-outline-primary" data-toggle="modal"
                         data-target="#exampleModal">
-                        Apply now
+                        Apply
                     </button>
                 </div>
             </ul>
@@ -56,21 +56,21 @@
                     <a href="/projects" class="nav-link nav-link-hover">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/success" class="nav-link nav-link-hover">Success Stories</a>
+                    <a href="/success" class="nav-link nav-link-hover">Success</a>
                 </li>
                 <li class="nav-item dropdown">
                     <button class="dropbtn nav-link nav-link-hover">More
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <ul class="dropdown-content">
-                        <a href="/why" class="nav-link nav-link-hover">About us</a>
+                        <a href="/why" class="nav-link nav-link-hover">About</a>
                         <a href="/contact" class="nav-link nav-link-hover">Contact</a>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <!-- <button class="modalBtn btn btn-primary">Apply now</button> -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Apply now
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                        Apply
                     </button>
                 </li>
             </ul>
@@ -191,5 +191,6 @@
 <% if (page == "index") { %>
 <script>
     document.querySelectorAll(".nav-link").forEach(function (link) { link.style.color = "white"; });
+    document.querySelectorAll(".social-media").forEach(function (link) { link.style.color = "rgba(255,255,255,.8"; });
 </script>
 <% } %>
