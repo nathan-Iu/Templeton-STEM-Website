@@ -4763,7 +4763,6 @@ html {
 
 body {
   box-sizing: border-box;
-  padding-right: 0 !important;
   font-family: ProximaNova, sans-serif;
   font-size: 2rem;
   font-weight: 400;
@@ -5339,7 +5338,7 @@ body {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .social-media-wrapper {
-    top: 11rem;
+    top: 9rem;
     right: .7rem;
   }
 }
@@ -5492,7 +5491,7 @@ body {
 }
 
 .mobile-nav {
-  background: var(--color-primary-dark);
+  background: var(--color-primary);
   position: fixed;
   top: 0;
   width: 100vw;

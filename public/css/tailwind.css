@@ -87,7 +87,6 @@ html {
 
 body {
     box-sizing: border-box;
-    padding-right: 0 !important;
     font-family: ProximaNova, sans-serif;
     font-size: 2rem;
     font-weight: 400;
@@ -801,7 +800,7 @@ body {
 }
 
 .mobile-nav {
-    background: var(--color-primary-dark);
+    background: var(--color-primary);
     position: fixed;
     top: 0;
     width: 100vw;
